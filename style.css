@@ -1,0 +1,410 @@
+/* Asosiy sozlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tugmalar */
+.btn {
+    display: inline-block;
+    background-color: #00b894;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #019875;
+}
+
+.btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: #00b894;
+    border: 2px solid #00b894;
+    padding: 10px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #00b894;
+    color: white;
+}
+
+/* Header */
+header {
+    background: #0f172a;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00b894;
+}
+
+.logo i {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00b894;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 70px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Biz haqimizda */
+.about {
+    padding: 80px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #00b894;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.feature-card p {
+    color: #64748b;
+}
+
+/* Guruhlar */
+.programs {
+    background-color: #f1f5f9;
+    padding: 80px 0;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.program-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.program-card.popular {
+    border: 2px solid #00b894;
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #00b894;
+    color: white;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.program-card h3 {
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.program-card .age {
+    display: inline-block;
+    background: #e2e8f0;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.program-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.program-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.program-card ul li {
+    margin-bottom: 10px;
+    color: #334155;
+    font-size: 15px;
+}
+
+.program-card ul li i {
+    color: #00b894;
+    margin-right: 10px;
+}
+
+/* Murabbiylar */
+.coaches {
+    padding: 80px 0;
+}
+
+.coach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.coach-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.coach-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.bg-1 { background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80'); }
+.bg-2 { background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80'); }
+.bg-3 { background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80'); }
+
+.coach-card h3 {
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.coach-card p {
+    color: #64748b;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+/* Aloqa qismi */
+.contact {
+    background-color: #0f172a;
+    color: white;
+    padding: 80px 0;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.contact-info p i {
+    color: #00b894;
+    margin-right: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #1e293b;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+/* Footer */
+footer {
+    background: #090d16;
+    color: #64748b;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Responsiv dizayn (Mobil qurilmalar uchun) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0f172a;
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
